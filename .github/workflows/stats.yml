@@ -1,0 +1,63 @@
+name: Refresh stats
+
+on:
+  workflow_dispatch:
+  # Monthly tick: stats are regenerated on the 1st of Jan/Apr/Jul/Oct, the
+  # other months only keep the schedule alive (GitHub disables scheduled
+  # workflows in public repos after 60 days without activity).
+  schedule:
+    - cron: "17 3 1 * *"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if this is a quarterly run
+        id: when
+        run: |
+          month=$(date -u +%-m)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $(( (month - 1) % 3 )) -eq 0 ]; then
+            echo "refresh=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.when.outputs.refresh == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.when.outputs.refresh == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Generate stat cards
+        if: steps.when.outputs.refresh == 'true'
+        env:
+          # Personal token: GITHUB_TOKEN can't see private/org repos or my contributions.
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: python3 scripts/gen_stats.py
+
+      - name: Commit changes
+        if: steps.when.outputs.refresh == 'true'
+        run: |
+          git add assets/
+          if git diff --cached --quiet; then
+            echo "Stats unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh stats ($(date -u +%Y-%m-%d))"
+          git push
+
+      - name: Keep schedule enabled
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow enable stats.yml --repo "${{ github.repository }}"
