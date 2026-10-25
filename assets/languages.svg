@@ -21,13 +21,13 @@
 <g clip-path="url(#c)">
 <rect x="20.00" y="46" width="69.66" height="8" fill="#3178c6"/>
 <rect x="89.16" y="46" width="65.50" height="8" fill="#00ADD8"/>
-<rect x="154.17" y="46" width="48.33" height="8" fill="#178600"/>
-<rect x="201.99" y="46" width="46.40" height="8" fill="#e34c26"/>
-<rect x="247.89" y="46" width="31.64" height="8" fill="#41b883"/>
-<rect x="279.03" y="46" width="30.65" height="8" fill="#f1e05a"/>
-<rect x="309.18" y="46" width="19.41" height="8" fill="#4F5D95"/>
-<rect x="328.09" y="46" width="15.96" height="8" fill="#c6538c"/>
-<rect x="343.55" y="46" width="36.95" height="8" fill="#8b949e"/>
+<rect x="154.16" y="46" width="48.32" height="8" fill="#178600"/>
+<rect x="201.98" y="46" width="46.40" height="8" fill="#e34c26"/>
+<rect x="247.88" y="46" width="31.64" height="8" fill="#41b883"/>
+<rect x="279.02" y="46" width="30.64" height="8" fill="#f1e05a"/>
+<rect x="309.16" y="46" width="19.41" height="8" fill="#4F5D95"/>
+<rect x="328.08" y="46" width="15.96" height="8" fill="#c6538c"/>
+<rect x="343.54" y="46" width="36.96" height="8" fill="#8b949e"/>
 </g>
 <circle cx="25.0" cy="76" r="5" fill="#3178c6"/>
 <text class="l" x="36.0" y="80">TypeScript <tspan class="v">19.2%</tspan></text>
@@ -36,9 +36,9 @@
 <circle cx="25.0" cy="100" r="5" fill="#178600"/>
 <text class="l" x="36.0" y="104">C# <tspan class="v">13.3%</tspan></text>
 <circle cx="205.0" cy="100" r="5" fill="#e34c26"/>
-<text class="l" x="216.0" y="104">HTML <tspan class="v">12.8%</tspan></text>
+<text class="l" x="216.0" y="104">HTML <tspan class="v">12.7%</tspan></text>
 <circle cx="25.0" cy="124" r="5" fill="#41b883"/>
-<text class="l" x="36.0" y="128">Vue <tspan class="v">8.7%</tspan></text>
+<text class="l" x="36.0" y="128">Vue <tspan class="v">8.6%</tspan></text>
 <circle cx="205.0" cy="124" r="5" fill="#f1e05a"/>
 <text class="l" x="216.0" y="128">JavaScript <tspan class="v">8.4%</tspan></text>
 <circle cx="25.0" cy="148" r="5" fill="#4F5D95"/>
