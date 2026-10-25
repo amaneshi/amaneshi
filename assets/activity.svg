@@ -17,7 +17,7 @@
 
 <rect class="bg" x="0.5" y="0.5" width="399" height="199" rx="6"/>
 <text class="t" x="20" y="32">Contributions per year</text>
-<text class="l" x="380" y="32" text-anchor="end">4,773 total</text>
+<text class="l" x="380" y="32" text-anchor="end">4,774 total</text>
 <rect class="track" x="27.2" y="52" width="21.6" height="118" rx="3"/>
 <rect class="bar" x="27.2" y="168.0" width="21.6" height="2.0" rx="3"><title>2017: 26 contributions</title></rect>
 <text class="v" x="38.0" y="163.0" text-anchor="middle">26</text>
@@ -55,7 +55,7 @@
 <text class="v" x="326.0" y="47.0" text-anchor="middle">1927</text>
 <text class="l" x="326.0" y="188" text-anchor="middle">'25</text>
 <rect class="track" x="351.2" y="52" width="21.6" height="118" rx="3"/>
-<rect class="bar" x="351.2" y="132.0" width="21.6" height="38.0" rx="3"><title>2026: 620 contributions</title></rect>
-<text class="v" x="362.0" y="127.0" text-anchor="middle">620</text>
+<rect class="bar" x="351.2" y="132.0" width="21.6" height="38.0" rx="3"><title>2026: 621 contributions</title></rect>
+<text class="v" x="362.0" y="127.0" text-anchor="middle">621</text>
 <text class="l" x="362.0" y="188" text-anchor="middle">'26</text>
 </svg>
